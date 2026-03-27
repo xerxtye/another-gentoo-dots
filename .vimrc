@@ -15,9 +15,11 @@ call plug#end()
 
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-nnoremap <ALT-y> "+y
-vnoremap <ALT-y> "+y
-vmap <silent> y y:call system('wl-copy', @@)<CR>
+" nnoremap <A-y> "+y
+" vnoremap <A-y> "+y
+
+" ALT+Y wl-copy
+xnoremap <Esc>y y:call system('wl-copy', @@)<CR>
 
 nnoremap <Esc> :nohlsearch<CR>
 
@@ -76,7 +78,6 @@ set smartcase
 " Next/prev tab binds
 nnoremap <Tab> :tabn<CR>
 nnoremap <S-Tab> :tabp<CR>
-
 
 "" Coc settings
 
